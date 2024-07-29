@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dice:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+.dice.male {
+    background-color: #add8e6;
+}
+
+.dice.female {
+    background-color: #ffb6c1;
+}
+
+.dice.time {
+    background-color: #ffa500;
+}
+
+@keyframes roll {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rolling {
+    animation: roll 0.5s linear infinite;
+}
